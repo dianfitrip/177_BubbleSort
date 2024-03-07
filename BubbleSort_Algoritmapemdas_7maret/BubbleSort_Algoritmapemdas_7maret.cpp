@@ -19,11 +19,11 @@ void input() {		 // Procedure untuk input
 	}
 	cout << endl;								// output ke layar
 	cout << "====================" << endl;		// output ke layar
-	cout << "Masukkan Elemen Array";			// output ke layar
+	cout << "Masukkan Elemen Array" << endl;		// output ke layar
 	cout << "====================" << endl;		// output ke layar
 
-	for (int i = 0; 1 < n; i++) {			// looping dengan i dimulai dari 0 hingga n-1
-		cout << "Data ke -" << (i + 1) << ";";		//output ke layar
+	for (int i = 0; i < n; i++) {			// looping dengan i dimulai dari 0 hingga n-1
+		cout << "Data ke -" << (i + 1) << ": ";		//output ke layar
 		cin >> a[i];		//input dari pengguna
 
 	}
@@ -44,7 +44,7 @@ void display() {				//prosedur untuk menampilkan hasil
 void bubbleSortArray() {			//Prosedur untuk mengurutkan Array dengan metode bubble sort
 	int pass = 1;					//Step 1
 
-	 for (pass; pass <= n - 1; pass + 1) {				//looping dengan i dimulai dari 1 hingga n-1
+	 for (pass; pass <= n - 1; pass++) {				//looping dengan i dimulai dari 1 hingga n-1
 		 for (int j = 0; j <= n - 1 - pass; j++) {		//looping dengan 1 dimulai dari 0 hingga n-1
 			 if (a[j] > a[j + 1]) {						//jika nilai pada a[j] lebih besar dari a[j+1]
 				 int temp = a[j];						//simpan nilai a[j] ke variabel sementara temp
@@ -57,3 +57,9 @@ void bubbleSortArray() {			//Prosedur untuk mengurutkan Array dengan metode bubb
 	}
 }
 
+int main() {
+	input();						//Memanggil read()
+	bubbleSortArray();				//Memanggil bubbleSortArray()
+	display();						//Memanggil display()
+	return 0;
+}
